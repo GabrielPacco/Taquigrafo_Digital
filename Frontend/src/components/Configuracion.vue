@@ -67,9 +67,9 @@
                 color="white"
                 v-bind="attrs"
                 v-on="on"
-                link @click="$router.push({ path: '/admin' })"
+                link @click="$router.push({ path: '/caso' })"
               >
-                Volver a actividades
+                Volver a casos
               </v-btn>
             </v-row>
     
@@ -84,13 +84,13 @@
                         ID
                       </th>
                       <th class="text-center">
-                        Participante
+                        Configuracion
                       </th>
                       <th class="text-center">
                         Base
                       </th>
                       <th class="text-center">
-                        Premio
+                        Activo
                       </th>
                     </tr>
                   </thead>
@@ -98,10 +98,10 @@
                     <tr
                       v-for="task in tasks" :key="task"
                     >
-                        <td>{{ task.id_conc }} </td>
-                        <td>{{ task.participante }} </td>
-                        <td>{{ task.base }} </td>
-                        <td>{{ task.premio }} </td>
+                        <td>{{ "id" }} </td>
+                        <td>{{ "Configuracion" }} </td>
+                        <td>{{ "Contexto" }} </td>
+                        <td>{{ "Activo" }} </td>
                         <td><v-btn
                             small
                             color="error"

@@ -71,75 +71,25 @@
           color="white"
           v-bind="attrs"
           v-on="on"
-          link @click="$router.push({ path: '/admin' })"
+          link @click="$router.push({ path: '/participante' })"
         >
-          Volver a actividades
+          Volver a participantes
         </v-btn>
       </v-row>
   
-      <v-card
-        class="mx-auto"
-        width="1000"
-      >
-        <v-card-text>
-          <p class="text-h4 text--primary">
-            Titulo
-          </p>
-          <p>Tipo de declaracion</p>
-          <div class="text--primary">
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.".
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.". 
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.". 
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.". 
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.". 
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.". 
-          </div>
-        </v-card-text>
-      </v-card>
-
-      <v-card
-        class="mx-auto"
-        width="1000"
-      >
-        <v-card-text>
-          <p class="text-h4 text--primary">
-            Titulo
-          </p>
-          <p>Tipo de declaracion</p>
-          <div class="text--primary">
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.".
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.". 
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.". 
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.". 
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.". 
-            relating to or dependent on charity; charitable.
-            "an eleemosynary educational institution.". 
-          </div>
-        </v-card-text>
-      </v-card>
       <v-row v-for="task in tasks" :key="task">
         <v-card
         class="mx-auto"
-        width="1000"
+        max-width="1000"
+        width="900"
       >
         <v-card-text>
           <p class="text-h4 text--primary">
-            task.titulo
+            {{task.titulo}}
           </p>
-          <p>task.tipo</p>
+          <p>{{task.tipo}}</p>
           <div class="text--primary">
-            task.declaracion
+            {{task.declaracion}}
           </div>
         </v-card-text>
       </v-card>

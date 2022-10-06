@@ -43,20 +43,6 @@
                   ></v-text-field>
                   <v-text-field
                     class="mx-10"
-                    v-model='newTask2.Fecha'
-                    :rules="nameRules"
-                    label="Fecha de inicio"
-                    required
-                  ></v-text-field>
-                  <v-text-field
-                    class="mx-10"
-                    v-model='newTask2.HoraIn'
-                    :rules="nameRules"
-                    label="Fecha de finalizacion"
-                    required
-                  ></v-text-field>
-                  <v-text-field
-                    class="mx-10"
                     v-model='newTask2.Estado'
                     :rules="nameRules"
                     label="Estado"
@@ -81,7 +67,7 @@
               color="white"
               v-bind="attrs"
               v-on="on"
-              link @click="$router.push({ path: '/concurso' })"
+              link @click="$router.push({ path: '/configuracion' })"
             >
               Configuracion
             </v-btn>
@@ -132,7 +118,7 @@
                           class="grey  mx-2"
                           
                           v-on="on"
-                          @click="filterSesion(task.id_caso)"
+                          @click="$router.push({ path: '/sesion' })"
                         >
                           <v-icon dark>
                             mdi-lead-pencil
@@ -198,7 +184,9 @@
             axios.post(this.postURL+ '/sesion/get_sesion_caso',{id_caso:id_caso},this.config_request)
                 .then(() => {
                   this.id_caso=id_caso
+                  console.log("Cambie de ruta")
                   return this.$router.push({ path: '/sesion' })
+                  
                 })
                 .catch((error) => {
                   console.log(error)
