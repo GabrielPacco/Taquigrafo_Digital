@@ -11,7 +11,7 @@
         class="my-1"
         height = "60"
         width = "200"
-        src="@/img/logo3.png"
+        src="@/img/newlogo.png"
         alt="secosystem"
         link @click="$router.push({ path: '/' })"
       >
