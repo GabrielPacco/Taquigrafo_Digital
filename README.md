@@ -25,3 +25,4 @@ npm run serve
 ```
 
 ### Ingresar al localhost donde podrá ver la página web
+### La parte del Backend está hosteada y ejecutándose en un servidor
